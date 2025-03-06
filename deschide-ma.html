@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursie</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #FFD1DC; /* Pastel pink */
+            color: #D1477E;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        button {
+            font-size: 20px;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        #daBtn {
+            background-color: #FFB6C1;
+            color: white;
+        }
+        #nuBtn {
+            background-color: #FF69B4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pot sa merg va rog in excursie☺️😁?</h1>
+    <div id="container">
+        <button id="daBtn" onclick="approveTrip()">DA</button>
+        <button id="nuBtn" onclick="growDa()">NU</button>
+    </div>
+
+    <script>
+        let daSize = 20;
+
+        function growDa() {
+            daSize *= 1.5;
+            document.getElementById("daBtn").style.fontSize = daSize + "px";
+            document.getElementById("daBtn").style.padding = (daSize / 5) + "px " + (daSize / 3) + "px";
+
+            if (daSize > window.innerWidth * 0.9) {
+                alert("Nu mai ai de ales! Merg in excursie! 🥰");
+            }
+        }
+
+        function approveTrip() {
+            alert("Multumesc!! 💖🥳");
+        }
+    </script>
+</body>
+</html>
